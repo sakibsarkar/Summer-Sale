@@ -18,7 +18,7 @@ function addItems(thisCard) {
         document.querySelector(".purchase").classList.remove("disabled")
         document.querySelector(".purchase").removeAttribute("disabled")
     }
-    if (item_total > 200) {
+    if (item_total >= 200) {
         document.querySelector(".apply").classList.remove("disabled");
         document.querySelector(".apply").removeAttribute("disabled")
         document.querySelector("#coupon").removeAttribute("readonly")
@@ -47,7 +47,6 @@ function addItems(thisCard) {
 }
 
 
-
 // coupon function
 
 function coupon() {
@@ -64,3 +63,17 @@ function coupon() {
     }
     
 }
+
+// modal close
+document.querySelector(".myBTN").addEventListener("click",function(){
+    let item_list = document.querySelector(".item_list");
+    let total_price = document.querySelector("#total_price");
+    let discount_total_price = document.querySelector("#discount_total_price");
+    let discount_price = document.querySelector("#discount_price");
+    let coupon_code = document.getElementById("coupon");
+    item_list.innerHTML = "";
+    total_price.innerText = "00.00";
+    discount_total_price.innerText = "00.00";
+    discount_price.innerText = "00.00";
+    coupon_code.value = ""
+})
