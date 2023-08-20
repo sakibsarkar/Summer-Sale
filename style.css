@@ -197,6 +197,9 @@ header {
 
 /* order side */
 
+.cart{
+    margin: 40px 0 0 0;
+}
 
 .cupon_container {
     display: flex;
@@ -327,6 +330,33 @@ header {
 
 /* responsive */
 @media screen and (max-width:576px) {
+    .own_style{
+        width: 400px;
+        height: 400px;
+    }
+
+    .popup {
+        margin: 104px 0 104px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .popup h1 {
+        margin: 10px 0 16px 0;
+    }
+    
+    .popup p {
+        font-size: 15px;
+       ;
+    
+    }
+    
+    .myBTN {
+        margin: 0 0 0 0;
+        
+    }
     .homepage_container {
         flex-direction: column;
     }
@@ -353,6 +383,13 @@ header {
 }
 
 @media screen and (min-width:576px) and (max-width:1065px) {
+    .own_style{
+        width: 70%;
+        height:600px ;
+    }
+    .cart{
+        margin: 40px 0 0 0;
+    }
     .left_side h3 {
         font-size: 25px;
     }
@@ -380,7 +417,9 @@ header {
 }
 
 @media screen and (min-width:1066px) and (max-width:1300px) {
-    
+    .cart{
+        margin: 0;
+    }
     .left_side h1 {
         font-size: 45px;
     }
