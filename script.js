@@ -59,6 +59,7 @@ function couponApply() {
 
 // modal close
 document.querySelector(".myBTN").addEventListener("click", function () {
+    item_serial_number = 0;
     let item_list = document.querySelector(".item_list");
     let total_price = document.querySelector("#total_price");
     let discount_total_price = document.querySelector("#discount_total_price");
