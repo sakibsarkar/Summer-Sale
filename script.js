@@ -30,28 +30,28 @@ function addItems(thisCard) {
     ul.innerText = item_serial_number + ". " + item_name;
     item_list.appendChild(ul);
 
-    return item_total
+    
 
 }
 
 function couponApply() {
     let coupon_code = document.getElementById("coupon").value;
     if (coupon_code == "SELL200") {
-        console.log("fwasjf")
-        let my_discount = item_total * (20 / 100).toFixed(2)
+        document.getElementById("coupon").value = "";
+        let my_discount = item_total * (20 / 100).toFixed(2);
         if (my_discount % 1 == 0) {
-            discount_price.innerText = my_discount + ".00"
-            discount_total_price.innerText = item_total - parseFloat(discount_price.innerText)
+            discount_price.innerText = my_discount + ".00";
+            discount_total_price.innerText = item_total - parseFloat(discount_price.innerText);
         }
         else {
-            discount_price.innerText = my_discount.toFixed(2)
-            discount_total_price.innerText = item_total - parseFloat(discount_price.innerText)
+            discount_price.innerText = my_discount.toFixed(2);
+            discount_total_price.innerText = item_total - parseFloat(discount_price.innerText);
         }
     }
 
     else {
         alert("Wrong coupon code");
-        document.getElementById("coupon").value = ""
+        document.getElementById("coupon").value = "";
     }
 
 }
@@ -59,7 +59,7 @@ function couponApply() {
 
 // modal close
 document.querySelector(".myBTN").addEventListener("click", function () {
-    window.location.href = "index.html"
+    window.location.href = "index.html";
     item_serial_number = 0;
     let item_list = document.querySelector(".item_list");
     let total_price = document.querySelector("#total_price");
@@ -70,5 +70,5 @@ document.querySelector(".myBTN").addEventListener("click", function () {
     total_price.innerText = "00.00";
     discount_total_price.innerText = "00.00";
     discount_price.innerText = "00.00";
-    coupon_code.value = ""
+    coupon_code.value = "";
 })
